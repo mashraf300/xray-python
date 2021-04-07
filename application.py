@@ -74,4 +74,4 @@ class XRay(Resource):
 api.add_resource(XRay, '/xray')
 
 if __name__ == '__main__':
-    application.run(Debug=False, host='0.0.0.0', port=5000)
+    application.run(host='0.0.0.0', port=5000, debug=True)
