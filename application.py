@@ -54,7 +54,7 @@ api = Api(application)
 @application.route('/xray', methods = ['POST'])
 def upload_file():
     if 'image' not in request.files:
-            return {'output': -1}, 200
+            return jsonify({'output': -1}), 200
 
     img = request.files['image']
 
@@ -81,7 +81,7 @@ def upload_file():
 
     #os.remove("test/NORMAL/image.jpg")
     
-    return {'output': int(y[0][0])}, 200
+    return jsonify({'output': int(y[0][0])}), 200
 
 
 if __name__ == '__main__':
