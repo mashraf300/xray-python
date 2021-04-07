@@ -79,7 +79,7 @@ def upload_file():
 
     print(y[0][0])
 
-    os.remove("test/NORMAL/image.jpg")
+    #os.remove("test/NORMAL/image.jpg")
     
     return {'output': int(y[0][0])}, 200
 
