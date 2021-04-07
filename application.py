@@ -45,8 +45,8 @@ def process_path(file_path):
 
 
 
-app = Flask(__name__)
-api = Api(app)
+application = Flask(__name__)
+api = Api(application)
 
 
 class XRay(Resource):
@@ -74,4 +74,4 @@ class XRay(Resource):
 api.add_resource(XRay, '/xray')
 
 if __name__ == '__main__':
-    app.run(Debug=False, host='0.0.0.0')
+    application.run(Debug=False, host='0.0.0.0', port=5000)
